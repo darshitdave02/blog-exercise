@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+body,html {
+  margin: 0;
+  padding: 0;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  padding-left: 20rem;
+  padding-right: 20rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: black;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  top: 0;
+  position: sticky;
+
+}
+
+.title {
+  font-size: xx-large;
+  padding-top: 1rem;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: large;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+
+  
+}
+
+
+.nav > li {
+  list-style: none;
+  margin-left: 5rem;
+  font-size: larger;
+}
+
+.footer {
+  background-color: black;
   color: white;
+  display: flex;
+  
+  bottom: 0;
+  position: sticky;
+
 }
 
-.App-link {
-  color: #61dafb;
+.footer > p {
+  font-size: larger;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
 }
+
+.card {
+  width: 34vh;
+  display: flex;
+  flex-direction: column; 
+  margin: 2vh;
+  margin-left: 0;
+  padding: 0;
+  margin-right: 0;
+  border-color: rgb(222, 230, 227);
+  border-style: ridge; 
+}
+
+.card > img {
+  margin: 0;
+  padding: 0;
+  height: 35vh;
+ 
+}
+
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(136, 132, 132);
+  margin-top: 0;
+  padding-top: 0;
+
+}
+
+.meta > p {
+  margin-top:  0;
+  margin-bottom: 0.5em;
+}
+
+
+
+.interaction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px;
+  
+}
+
+.claps {
+  display: flex;
+  justify-content: flex-start;
+  font-size: large;
+  color: gray;
+
+  
+
+}
+
+/* .claps  {
+
+  height: 25px;
+  width: 25px;
+  margin-right: 4px;
+  
+} */
+
+.Clapping {
+  height: 25px;
+  width: 25px;
+  margin-right: 4px;
+
+}
+
+
+.likes  {
+  height: 25px;
+  width: 25px;
+  
+}
+
+
+.HeartBlack .HeartRed {
+
+  height: 25px;
+  width: 25px;
+}
+
+.details {
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.caption > p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: x-large;
+}
+
+.description > p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: gray;
+  border-bottom-color: rgb(222, 230, 227);
+  border-bottom-style: ridge; 
+  padding-bottom: 5px;
+
+}
+
+/*ipads and tablets*/
+@media screen and (min-width: 481px) and (max-width:768px) {
+ 
+  .main {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+  .content {
+      justify-content: space-around;
+  }
+ 
+}
+
+/*Mobile devices*/
+@media screen and (min-width: 320px) and (max-width:480px)
+{
+  .main {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+  .content {
+      justify-content: space-around;
+  }
+  
+}
+
+
+
+
+
+

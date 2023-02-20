@@ -1,8 +1,9 @@
 import React from "react";
-import Card from "./Card";
-import data from '../assets/mockData/index.json'
+import Card from "../components/Card";
+import datas from '../assets/mockData/index.json'
 
-type proType = {
+interface proType{
+    
     date: string,
     readingTime: string,
     title: string,
@@ -10,17 +11,16 @@ type proType = {
     claps: number,
     liked: boolean,
     image: string
-  
-  
+
   };
 
 export default function Body():JSX.Element {
     return (
         <div className="content main">
             
-            {data.map((data: proType) => (
+            {datas.map((data: proType) => (
                     
-                <Card {...data}/>
+                <Card data = {data}/>
             ))}
 
 

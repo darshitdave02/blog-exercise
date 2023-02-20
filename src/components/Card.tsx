@@ -2,23 +2,23 @@ import * as React from 'react'
 import {ReactComponent as HeartRed} from './../assets/Icons/heart-red.svg'
 import {ReactComponent as HeartBlack} from './../assets/Icons/heart-black.svg'
 import {ReactComponent as Clapping} from './../assets/Icons/clapping.svg'
+import { Interface } from 'readline'
 
-type proType = {
-    
-  date: string,
+interface proType {
+   data:{  date: string,
   readingTime: string,
   title: string,
   description: string,
   claps: number,
   liked: boolean,
   image: string
-
+  }
 
 };
 
-export default function Card(data:proType):JSX.Element {
+export default function Card(props:proType):JSX.Element {
 
-    const [clapCount,setClapCount] = React.useState(data.claps);
+    const [clapCount,setClapCount] = React.useState(props.data.claps);
 
     const [like,setLike] = React.useState(false);
 
@@ -35,25 +35,25 @@ export default function Card(data:proType):JSX.Element {
          
             <div className="card">
 
-            <img src={require(`./../assets/Images/${data.image}`)} alt={data.image} />
+            <img src={require(`./../assets/Images/${props.data.image}`)} alt={props.data.image} />
 
             <div className="details">
                 <div className="meta">
                     <p>
-                        {data.date}
+                        {props.data.date}
                     </p>
                     <p>
-                        {data.readingTime}
+                        {props.data.readingTime}
                     </p>
                 </div>
                 <div className="caption">
                     <p>
-                        {data.title}
+                        {props.data.title}
                     </p>
                 </div>
                 <div className="description">
                     <p>
-                        {data.description}
+                        {props.data.description}
                     </p>
                 </div>
                 <div className="interaction">
